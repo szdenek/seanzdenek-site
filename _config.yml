@@ -1,0 +1,40 @@
+title: Sean Zdenek
+email: seanzdenek@gmail.com
+description: "Access, sound, captioning, film/media."
+baseurl: ""
+url: "https://seanzdenek.com"
+author: Sean Zdenek
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Permalink structure to match WordPress date-based URLs
+permalink: /:year/:month/:day/:title/
+
+# Minima theme settings
+minima:
+  skin: classic
+
+# Control which pages appear in the nav bar (in order)
+header_pages:
+  - cv.html
+  - publications.html
+  - _pages/ap-intro.html
+  - category/captioning/index.html
+  - fair-use-notice.html
+
+# Include _pages directory and category pages
+include:
+  - _pages
+  - category
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/

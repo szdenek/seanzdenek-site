@@ -1,0 +1,90 @@
+---
+layout: post
+title: "Caption every screen."
+date: 2020-03-22
+categories:
+  - Captioning
+  - Visual Design
+tags:
+  - Alison Brie
+  - Color
+  - Experimental
+  - Guidelines
+  - Horse girl
+  - Netflix
+  - Placement
+  - Positioning
+  - Style
+image: /assets/images/2020/03/feature-image-Horsegirl-1080x608-1-500x250.jpg
+image_full: /assets/images/2020/03/feature-image-Horsegirl-1080x608-1-1024x576.jpg
+image_alt: "A frame from Horse Girl showing a TV screen, which includes a yellow caption, \"That was different.\" At the bottom of the frame is a second caption track in white letters: \"in a dirty gas station bathroom, and this is too much for you?\""
+---
+
+<p>The characters on our favorite television programs are just like us: they come home from work and stream their favorite TV shows and YouTube videos. But it&#8217;s hard for me to recall any programs that showed actors using captioned media. While the sounds emantating from their screens may be captioned for us, the sounds are not captioned for them. </p>
+
+<p>Even as accessibility advocates make the case that captioning is a centerpiece of universal design, <strong>captioning doesn&#8217;t have a very high public profile</strong> . Yes, people tweet and write about the value of captioning every day, but we don&#8217;t have many opportunities to engage with captioned media in the public sphere. Only a handful of cities in the U.S. require captioning on all public screens (bars, waiting rooms, etc.). Outside of these cities &#8212; <a href="https://www.portlandoregon.gov/69431">Portland (Oregon)</a>, <a href="https://www.a2gov.org/departments/city-clerk/Documents/16-24%20Closed%20Captioning%20Ordinance%20Approval%20Notice.pdf">Ann Arbor</a>, <a href="https://www.cityofrochester.gov/article.aspx?id=8589973222">Rochester</a>, <a href="https://cabq.legistar.com/LegislationDetail.aspx?ID=4214613&amp;GUID=97D83AD7-94B8-4083-94F6-4B9450B67F13">Alburquerque</a>, <a href="https://www.seattle.gov/civilrights/civil-rights/new-laws-and-amendments/closed-captioning">Seattle</a>, <a href="https://sfgov.org/sfmdc/resolution-2008-03-board-supervisorsclosed-captioning">San Francisco</a> &#8212; we are likely to encounter public captioning only in airports and select bars and restaurants.  At the movie theater, good luck finding an <a href="https://www.regmovies.com/static/en/us/theatre/captioning-and-descriptive-video">open captioned showing</a> in your city.</p>
+
+
+
+<p>When captions are enabled on the screens inside the fictional programs we watch, they don&#8217;t necessarily make these programs more accessible to us. But they do make captioning itself more visible. <strong>Captioning is normalized when it becomes something to be expected no matter where we encounter it</strong>. Producers also model more inclusive worlds (and help to counter the <a href="https://errorsofenchantment.com/closed-captioning-mandate-and-the-gop-a-sad-shade-of-the-same/">public&#8217;s resistance to open captioning</a>) when they depict characters on TV who consume captioned programming. </p>
+
+
+
+<p>I&#8217;ve written about this issue before. In a 2018 article on &#8220;<a href="http://technorhetoric.net/23.1/topoi/zdenek/index.html">Designing Captions</a>,&#8221; I used the term &#8220;<a href="http://kairos.technorhetoric.net/23.1/topoi/zdenek/metacaptioning.html">meta captioning</a>&#8221; to refer to the &#8220;process of hard coding captions onto the screens displayed inside the screens we are watching.&#8221; Meta captioning puts captions on every screen, even the screens that characters aren&#8217;t paying attention to and viewers don&#8217;t have enough time to read. In other words, meta captions contribute to a scene&#8217;s inclusive ambience even though they are not always intended to be read like traditional speech captions. </p>
+
+
+
+<p>I&#8217;m always a bit disappointed when I see people on TV interacting with uncaptioned media, despite the fact that our fictional worlds are assumed to be populated entirely &#8212; with few exceptions &#8212; by hearing people who don&#8217;t need captions (presumably). My first inclination is to re-caption these scenes by using a more robust captioning format or burning meta captions onto the digital screens in these fictional worlds. </p>
+
+
+
+<p>Here&#8217;s an example from <em><a href="https://www.netflix.com/title/81060149">Horse Girl</a></em> (Netflix 2020) starring Alison Brie as a &#8220;sweet misfit with a fondness for crafts, horses and supernatural crime shows [who] finds her increasingly lucid dreams trickling into her waking life.&#8221; It&#8217;s the supernatural crime show part that&#8217;s relevant here.  In this scene, Brie is watching her favorite fictional program, <em>Purgatory</em>. We&#8217;re watching along with her, which means that the speech sounds on her television screen are intended to be read and understood by us (as opposed to appearing momentarily in the background of a scene as visual decoration).  In the<strong> original version</strong>, Brie is not watching <em>Purgatory</em> with captions: </p>
+
+
+
+<video width="100%" height="100%" poster="/assets/images/blog/poster-Horsegirl-captioned.jpg" controls>
+  <source src="/assets/images/blog/Horsegirl-TVcaptions-Captioned-Clip-720.mp4" type="video/mp4">
+ Sorry, your browser doesn&#8217;t support embedded videos.
+</video>
+<p class=vidcaption>Source: <em>Horse Girl</em> (2020). Netflix. Original captions.</vidcaption></p>
+
+
+
+<p>Let me offer a <strong>re-captioned intervention</strong> that uses a more versatile captioning format (<a href="https://www.w3.org/TR/webvtt1/">WebVTT</a>). In the video clip below, I experiment with screen positioning, font family, color, and type size. For color, I&#8217;m inspired by both the <a href="https://bbc.github.io/subtitle-guidelines/#Colours">BBC&#8217;s subtitling guidelines</a> for color (white, yellow, cyan, green) and <a href="https://readingsounds.net/when-a-yellow-subtitle-meets-a-character-from-the-simpsons/">Hulu&#8217;s default caption color</a>, which is a warm yellow (approx. red 255, green 204, blue 0). I haven&#8217;t tested these captions on multiple browsers or devices, and, honestly, I&#8217;m still learning and experimenting with WebVTT&#8217;s functionality for styling and positioning captions. If possible, <strong>please view the clip in Google Chrome</strong>, which supports WebVTT&#8217;s color and font styling, unlike Firefox. </p>
+
+
+
+<style>
+  video::cue(.Captions) { 
+    color: white; 
+  }
+ video::cue(.TVCaptions-offscreen) { 
+    color: white; 
+font-size: 1.2em;
+font-family: sans-serif; 
+  }
+ video::cue(.TVCaptions-onscreen) { 
+    color: #ffcc00; 
+font-size: .62em;
+font-family: monospace;
+  }
+video::cue(.TVCaptions-onscreen-closeup) { 
+    color: #ffcc00; 
+font-size: 1em;
+font-family: monospace;
+  }
+</style>
+<video width="100%" height="100%" poster="/assets/images/blog/poster-Horsegirl-WebVTT-fullCaptions.jpg" controls>
+  <source src="/assets/images/blog/Horsegirl-TVcaptions-uncaptioned-Clip-720.mp4" type="video/mp4">
+<track label="English" kind="captions" srclang="en" src="https://seanzdenek.com//assets/images/blog/Horsegirl-WebVTT-full.vtt" default>
+ Sorry, your browser doesn&#8217;t support embedded videos.
+</video>
+<p class=vidcaption>Source: <em>Horse Girl</em> (2020). Netflix. Re-captioned by the author using the WebVTT format.</vidcaption></p>
+
+
+
+<p>Feel free to browse the <a href="/assets/images/blog/Horsegirl-WebVTT-full.vtt.html">WebVTT caption file</a> I created for this clip.  WebVTT supports simple style markup (identical to CSS styling). I created a different class for each caption style I needed for this clip. Classes included &#8220;TVCaptions-offscreen,&#8221; &#8220;TVCaptions-onscreen,&#8221; and &#8220;TVCaptions-onscreen-closeup.&#8221; Each class was defined in terms of text color, font size, and font family. Screen position for each caption is included with each timestamp.  </p>
+
+
+
+<p>I hope this experiment starts a conversation about the limits of single-style, bottom-center captioning.  When we caption every screen &#8212; even (and especially) the screens encountered by the fictional character on our favorite programs &#8212; we help to normalize and center captioning as a regular design feature of the public sphere.</p>

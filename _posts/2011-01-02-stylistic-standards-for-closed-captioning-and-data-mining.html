@@ -1,0 +1,84 @@
+---
+layout: post
+title: "Stylistic standards for closed captioning and data mining"
+date: 2011-01-02
+categories:
+  - Captioning
+  - Data Mining
+  - Non-Speech
+  - Visual Design
+tags:
+  - Data Mining
+  - Style
+image: /assets/images/2011/01/gear-data-mining-640x290-500x250.jpg
+image_full: /assets/images/2011/01/gear-data-mining-640x290.jpg
+image_alt: "A large, steel, industrial gear"
+---
+
+<p>When speaker IDs, musical lyrics, and sound descriptions have their own distinctive stylistic treatments, they can be extracted from closed caption files and studied as separate units of discourse. The only efficient and practical way to study hundreds or thousands of sound descriptions at one time is to use a program to separate speech from non-speech. </p>
+<p>
+
+<p>Such a program would seek out specific patterns: marks of punctuation (e.g. brackets, parentheses, musical notes, and/or colons) perhaps used in conjunction with specific typographic treatments. For example, a word in all caps immediately preceding a colon is always a speaker ID. A word in all caps surrounded by parentheses or brackets is always a sound description. A lower case word in parentheses or brackets is always a sound description. Well, that&#8217;s been my experience so far, anyway. </p>
+<p>Researching sound descriptions or other types of non-speech information (NSI) is challenged by a lack of uniformity across the industry. Still, I think it&#8217;s possible to undertake a large scale study of sound descriptions, despite the differences in companies&#8217; captioning styles. My study, tentatively titled <em>Anatomy of a Sound Description</em>, sets out to provide the first such large scale study of sound descriptions. At this point, I&#8217;m using a software program written by my son to 1) extract all the NSI from each movie caption file, 2) separate sound descriptions from speaker IDs, and then 3) organize each type into its own HTML table. In some cases, a caption will contain both a speaker ID and a sound description. These captions are copied into both tables. The full list of NSI can be ordered chronologically or alphabetically. Each example of NSI can be linked to its location in the full caption file, which is useful for seeing a sound description in its original context. </p>
+<table border=1 width=500>
+<caption><strong>SPEAKER IDs That Can Be Programmatically Determined</strong></caption>
+<tbody>
+<tr>
+<th scope="col">Movie</th>
+<th scope="col">Sample Speaker ID</th>
+</tr>
+<tr>
+<td><em>An Education</em></td>
+<td>Oh, no, they&#8217;re not, really.<br />
+DANNY: It&#8217;s true.</td>
+</tr>
+<tr>
+<td><em>A Serious Man</em></td>
+<td>ARTHUR:<br />
+I&#8217;ll be out in a minute.</td>
+</tr>
+<tr>
+<td><em>Avatar</em></td>
+<td>Come on. That&#8217;s&#8230;<br />
+GRACE: All right,<br />
+knock it off, you two.</td>
+</tr>
+<tr>
+<td><em>District 9</em></td>
+<td>WIKUS:<br />
+This is the largest operation<br />
+that MNU has ever undertaken,</td>
+</tr>
+</tbody>
+</table>
+<p><P></p>
+<table border=1 width=500>
+<caption><strong>NON-SPEECH SOUNDS That Can Be Programmatically Determined</strong></caption>
+<tbody>
+<tr>
+<th scope="col">Movie</th>
+<th scope="col">Sample Non-Speech Sound</th>
+</tr>
+<tr>
+<td><em>An Education</em></td>
+<td>(JENNY LAUGHING)<br />
+when she goes all<br />
+speccy and spotty.</td>
+</tr>
+<tr>
+<td><em>A Serious Man</em></td>
+<td>(LARRY SCREAMS)</td>
+</tr>
+<tr>
+<td><em>Avatar</em></td>
+<td>(CREATURE COOING)</td>
+</tr>
+<tr>
+<td><em>District 9</em></td>
+<td>[POWERS UP AND RUMBLES]</td>
+</tr>
+</tbody>
+</table>
+<p>While the sound descriptions in these examples are not stylistically identical (e.g. <em>District 9</em> uses brackets instead of parentheses), they are all still programmatically identifiable as sound descriptions. Even when movie captions use lower case for NSI (e.g. <em>New York, I Love You</em>, <em>Adventureland</em>, etc.), it is still possible to automatically extract NSI by isolating everything in parentheses or brackets (since it&#8217;s unlikely that parenthetical information will not be a sound description). If a caption file uses a seemingly identical treatment for both speaker IDs and sound descriptions, differences may remain that can be exploited. In <em>Shaun of the Dead</em>, for example, both sound descriptions and speaker IDs are surrounded by brackets. But the speaker IDs are set in italics, which may allow for just enough difference to allow them to be extracted into their own table. </p>
+<h3>Why is such a study warranted?</h3>
+<p> A large scale study of sound descriptions will provide a detailed description of current NSI practices. We simply don&#8217;t know enough about the range and nature of sound descriptions. How many sound descriptions are used in the typical movie? What are the main types of sound description? Is there a relationship between the number of sound descriptions in a movie and its genre? A detailed study might help improve current practices by giving captioners a deeper understanding of this most inventive aspect of captioning. I&#8217;m currently focusing on the best movies of 2009 and hope very soon to have a collection of 50 DVD caption files with NSI neatly extracted from each for analysis.   </p>

@@ -1,0 +1,241 @@
+---
+---
+
+// Widen the page wrapper (Minima default is 800px)
+$content-width: 1100px;
+
+@import "minima";
+
+// -----------------------------------------------
+// seanzdenek.com custom styles
+// -----------------------------------------------
+
+// Constrain bio text on home page while letting the grid use full width
+.home-intro {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Typography — DM Sans 17px
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.72;
+}
+
+// Sticky dark header
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #1a1a1a;
+  border-bottom: none;
+
+  // Full-width inner wrapper, name flush to left edge
+  .wrapper {
+    max-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.site-title,
+.site-title:visited {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.85;
+  }
+}
+
+.site-nav {
+  background: #1a1a1a;
+
+  .page-link {
+    font-size: 1.1rem;
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+      opacity: 0.75;
+      text-decoration: none;
+    }
+  }
+
+  // Mobile nav toggle (hamburger) color
+  .nav-trigger:checked ~ .trigger {
+    background: #1a1a1a;
+  }
+
+  label[for="nav-trigger"] .menu-icon > svg path {
+    fill: #fff;
+  }
+}
+
+// Scale down footer/meta elements that Minima sizes relative to body
+.site-footer,
+.post-meta,
+.post-list .post-meta {
+  font-size: 0.85rem;
+}
+
+
+// Article navigation (between Accessible Podcasting sections)
+.article-nav {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid #e8e8e8;
+  font-size: 0.95rem;
+  color: #333;
+
+  a {
+    color: #2a7ae2;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Category tags shown after post titles on category archive pages
+.post-categories {
+  display: inline;
+  margin-left: 0.4rem;
+  font-size: 0.85rem;
+
+  &::before {
+    content: "— ";
+    color: #828282;
+  }
+
+  a {
+    color: #828282;
+    text-decoration: none;
+
+    &:not(:last-child)::after {
+      content: ", ";
+    }
+
+    &:hover {
+      color: #2a7ae2;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Subcategory nav on category pages
+.subcategory-nav {
+  margin-bottom: 1.5rem;
+
+  h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    margin-left: 1.5rem;
+  }
+}
+
+// Post list dates on category pages — match home page style
+.post-list .post-meta {
+  font-size: 0.85rem;
+  color: #828282;
+  display: block;
+  margin-bottom: 0.1rem;
+}
+
+// Featured image at top of individual blog posts
+.post-hero {
+  margin: 0 0 1.5rem 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+  }
+
+  figcaption {
+    font-size: 0.8rem;
+    color: #828282;
+    font-style: italic;
+    margin-top: 0.4rem;
+    line-height: 1.4;
+  }
+}
+
+// Home page post grid
+.post-list-with-thumbs {
+  list-style: none;
+  margin-left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 2rem;
+  margin-top: 2.5rem;
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+
+  .post-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transform: translateY(-3px);
+    }
+  }
+
+  .post-thumb {
+    display: block;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .post-item-content {
+    padding: 1rem 1.25rem 1.25rem;
+
+    .post-meta {
+      display: block;
+      font-size: 0.8rem;
+      color: #999;
+      margin-bottom: 0.3rem;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 1.2rem;
+      line-height: 1.35;
+    }
+
+    .post-link {
+      color: #111;
+      text-decoration: none;
+
+      &:hover {
+        color: #2a7ae2;
+      }
+    }
+  }
+}

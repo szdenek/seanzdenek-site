@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">{{ page.title }}</h1>
+
+  {% if page.description %}
+  <p>{{ page.description }}</p>
+  {% endif %}
+
+  {% if page.subcategories %}
+  <nav class="subcategory-nav" aria-label="Subcategories">
+    <h2>Subcategories</h2>
+    <ul>
+      {% for sub in page.subcategories %}
+      <li><a href="{{ sub.url }}">{{ sub.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% endif %}
+
+  <h2>Posts</h2>
+  <ul class="post-list">
+    {% assign cat_posts = site.categories[page.category] %}
+    {% if page.filter_category %}
+      {% assign cat_posts = site.categories[page.filter_category] %}
+    {% endif %}
+    {% for post in cat_posts %}
+      {% if page.filter_category == nil or post.categories contains page.filter_category %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+        <a href="{{ post.url }}">{{ post.title }}</a>{% if post.categories.size > 1 %}<span class="post-categories">{% for cat in post.categories %}{% unless cat == page.category or cat == page.filter_category %}<a href="/category/{{ cat | downcase | replace: ' ', '-' | replace: "'", '' }}/">{{ cat }}</a>{% endunless %}{% endfor %}</span>{% endif %}
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
