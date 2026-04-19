@@ -100,7 +100,7 @@ body {
   color: #333;
 
   a {
-    color: #2a7ae2;
+    color: #1a5fb4;
     text-decoration: none;
 
     &:hover {
@@ -117,11 +117,11 @@ body {
 
   &::before {
     content: "— ";
-    color: #828282;
+    color: #595959;
   }
 
   a {
-    color: #828282;
+    color: #595959;
     text-decoration: none;
 
     &:not(:last-child)::after {
@@ -129,7 +129,7 @@ body {
     }
 
     &:hover {
-      color: #2a7ae2;
+      color: #1a5fb4;
       text-decoration: underline;
     }
   }
@@ -152,7 +152,7 @@ body {
 // Post list dates on category pages — match home page style
 .post-list .post-meta {
   font-size: 0.85rem;
-  color: #828282;
+  color: #595959;
   display: block;
   margin-bottom: 0.1rem;
 }
@@ -170,7 +170,7 @@ body {
 
   figcaption {
     font-size: 0.8rem;
-    color: #828282;
+    color: #595959;
     font-style: italic;
     margin-top: 0.4rem;
     line-height: 1.4;
@@ -223,7 +223,7 @@ body {
     .post-meta {
       display: block;
       font-size: 0.8rem;
-      color: #999;
+      color: #595959;
       margin-bottom: 0.3rem;
     }
 
@@ -239,7 +239,7 @@ body {
       text-decoration: none;
 
       &:hover {
-        color: #2a7ae2;
+        color: #1a5fb4;
       }
     }
   }
