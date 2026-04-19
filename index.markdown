@@ -7,7 +7,7 @@ Dr. Sean Zdenek is an associate professor of technical and professional writing 
 Sean grew up in California and currently lives in northeastern Maryland, a few miles from both Delaware and Pennsylvania.
 
 - [seanzdenek@gmail.com](mailto:seanzdenek@gmail.com)
-- Book: [Reading Sounds: Closed-Captioned Media and Popular Culture](https://www.amazon.com/Reading-Sounds-Closed-Captioned-Popular-Culture/dp/022631278X/), University of Chicago Press, 2015.
-- [ReadingSounds.net](http://ReadingSounds.net) is the supplemental website for the book, which includes over 500 video clips.
+- [Reading Sounds (UChicago, 2015)](https://www.amazon.com/Reading-Sounds-Closed-Captioned-Popular-Culture/dp/022631278X/)
+- [ReadingSounds.net](http://ReadingSounds.net)
 - [Curriculum vitae](/cv/)
-- [Professional biography](https://www.english.udel.edu/people/zdenek): Associate Professor, Department of English, University of Delaware
+- [Professional biography](https://www.english.udel.edu/people/zdenek)
