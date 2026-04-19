@@ -121,6 +121,12 @@ body {
   font-size: 0.85rem;
 }
 
+// Fix footer description contrast (Minima default is too light)
+.site-footer p,
+.site-footer .footer-col {
+  color: #595959;
+}
+
 
 // Article navigation (between Accessible Podcasting sections)
 .article-nav {
