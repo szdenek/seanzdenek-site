@@ -3,12 +3,12 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    <h2 class="footer-heading"><a href="mailto:{{ site.email }}">{{ site.author | escape }}</a>, PhD</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>&copy; 2008&ndash;{{ 'now' | date: "%Y" }} <a href="mailto:{{ site.email }}">{{ site.author | default: site.title | escape }}</a></li>
+          <li>&copy; 2008&ndash;{{ 'now' | date: "%Y" }}</li>
         </ul>
       </div>
 
