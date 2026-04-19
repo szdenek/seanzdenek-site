@@ -121,10 +121,27 @@ body {
   font-size: 0.85rem;
 }
 
-// Fix footer description contrast (Minima default is too light)
-.site-footer p,
-.site-footer .footer-col {
-  color: #595959;
+// Dark footer to match header
+.site-footer {
+  background: #1a1a1a;
+  border-top: none;
+  color: #fff;
+
+  p,
+  .footer-col,
+  .footer-heading,
+  .contact-list li {
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: #80b8ff;
+      text-decoration: none;
+    }
+  }
 }
 
 
