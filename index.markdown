@@ -6,8 +6,3 @@ Dr. Sean Zdenek is an associate professor of technical and professional writing 
 
 Sean grew up in California and currently lives in northeastern Maryland, a few miles from both Delaware and Pennsylvania.
 
-- [seanzdenek@gmail.com](mailto:seanzdenek@gmail.com)
-- [Reading Sounds (UChicago, 2015)](https://www.amazon.com/Reading-Sounds-Closed-Captioned-Popular-Culture/dp/022631278X/)
-- [ReadingSounds.net](http://ReadingSounds.net)
-- [Curriculum vitae](/cv/)
-- [Professional biography](https://www.english.udel.edu/people/zdenek)
