@@ -4,17 +4,10 @@ layout: default
 
 {%- comment -%} Hero section {%- endcomment -%}
 <section class="home-hero">
-  <div class="wrapper home-hero-inner">
-    <div class="home-hero-text">
-      <h1 class="home-hero-name">Sean Zdenek, PhD</h1>
-      <p class="home-hero-tagline">Access &middot; Sound &middot; Rhetoric &middot; Captioning &middot; Film/Media</p>
-      <p class="home-hero-role">Associate Professor of Technical and Professional Writing<br>University of Delaware</p>
-    </div>
-    <div class="home-hero-photo">
-      <img src="{{ '/assets/images/zdenek-headshot.jpg' | relative_url }}"
-           alt="Sean Zdenek"
-           width="260" height="260">
-    </div>
+  <div class="wrapper">
+    <h1 class="home-hero-name">Sean Zdenek, PhD</h1>
+    <p class="home-hero-tagline">Access &middot; Sound &middot; Rhetoric &middot; Captioning &middot; Film/Media</p>
+    <p class="home-hero-role">Associate Professor of Technical and Professional Writing<br>University of Delaware</p>
   </div>
 </section>
 
@@ -43,9 +36,16 @@ layout: default
 
 {%- comment -%} Bio / about section {%- endcomment -%}
 <section class="home-about">
-  <div class="wrapper">
-    <p class="home-book-label">biography</p>
-    <div class="home-intro">{{ content }}</div>
+  <div class="wrapper home-about-inner">
+    <div class="home-about-photo">
+      <img src="{{ '/assets/images/zdenek-headshot.jpg' | relative_url }}"
+           alt="Sean Zdenek"
+           width="180" height="273">
+    </div>
+    <div class="home-about-text">
+      <p class="home-book-label">biography</p>
+      <div class="home-intro">{{ content }}</div>
+    </div>
   </div>
 </section>
 

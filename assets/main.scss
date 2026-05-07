@@ -248,16 +248,6 @@ body {
   padding: 4rem 0;
 }
 
-.home-hero-inner {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
-.home-hero-text {
-  flex: 1;
-}
-
 .home-hero-name {
   font-size: 2.8rem;
   font-weight: 700;
@@ -279,20 +269,6 @@ body {
   color: #bbb;
   line-height: 1.6;
   margin: 0;
-}
-
-.home-hero-photo {
-  flex-shrink: 0;
-
-  img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-    border: 3px solid #80b8ff;
-    display: block;
-  }
 }
 
 // Book feature
@@ -388,6 +364,30 @@ body {
   background: #fff;
 }
 
+.home-about-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.home-about-photo {
+  flex-shrink: 0;
+
+  img {
+    width: 180px;
+    height: 273px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border-radius: 2px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.home-about-text {
+  flex: 1;
+}
+
 // Recent posts section
 .home-posts {
   background: #f8f8f8;
@@ -402,18 +402,14 @@ body {
   }
 }
 
-// Responsive: stack hero and book sections on narrow screens
+// Responsive: stack sections on narrow screens
 @media (max-width: 680px) {
-  .home-hero-inner {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
   .home-hero-name {
     font-size: 2rem;
   }
 
-  .home-book-inner {
+  .home-book-inner,
+  .home-about-inner {
     flex-direction: column;
     align-items: center;
     text-align: center;
