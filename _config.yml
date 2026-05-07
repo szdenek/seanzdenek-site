@@ -24,6 +24,7 @@ header_pages:
   - publications.html
   - _pages/ap-intro.html
   - category/captioning/index.html
+  - blog.html
   - fair-use-notice.html
 
 # Include _pages directory and category pages
