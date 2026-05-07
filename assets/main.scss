@@ -390,6 +390,14 @@ body {
 
 .home-about-text {
   flex: 1;
+
+  // Override the global .home-intro centering so bio text
+  // indents exactly the same amount as the book blurb (1.5rem)
+  .home-intro {
+    max-width: none;
+    margin-left: 1.5rem;
+    margin-right: 0;
+  }
 }
 
 // Recent posts section
