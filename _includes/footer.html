@@ -1,26 +1,6 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading"><a href="mailto:{{ site.email }}">{{ site.author | escape }}</a>, PhD</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>&copy; 2008&ndash;{{ 'now' | date: "%Y" }}</li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div>
-
+<footer class="site-footer">
+  <div class="wrapper footer-centered">
+    <p class="footer-name"><a href="mailto:{{ site.email }}">{{ site.author | escape }}</a>, PhD</p>
+    <p class="footer-copy">&copy; 2008&ndash;{{ 'now' | date: "%Y" }}</p>
   </div>
-
 </footer>

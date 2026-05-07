@@ -126,13 +126,7 @@ body {
   background: #1a1a1a;
   border-top: none;
   color: #fff;
-
-  p,
-  .footer-col,
-  .footer-heading,
-  .contact-list li {
-    color: #fff;
-  }
+  padding: 2rem 0;
 
   a {
     color: #fff;
@@ -142,6 +136,23 @@ body {
       text-decoration: none;
     }
   }
+}
+
+.footer-centered {
+  text-align: center;
+}
+
+.footer-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 0.25rem;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin: 0;
 }
 
 
