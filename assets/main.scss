@@ -487,6 +487,15 @@ body {
   flex: 1;
 }
 
+.home-blog-text {
+  padding-left: 1.5rem;
+
+  p {
+    font-size: 1.15rem;
+    line-height: 1.75;
+  }
+}
+
 // Recent posts section
 .home-posts {
   background: #f8f8f8;
