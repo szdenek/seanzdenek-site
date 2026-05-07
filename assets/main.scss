@@ -231,6 +231,193 @@ body {
   }
 }
 
+// -----------------------------------------------
+// Home page redesign — hero, book, about, posts
+// -----------------------------------------------
+
+// Hero
+.home-hero {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.home-hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.home-hero-text {
+  flex: 1;
+}
+
+.home-hero-name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.home-hero-tagline {
+  font-size: 1.15rem;
+  color: #80b8ff;
+  margin: 0 0 1rem;
+  letter-spacing: 0.03em;
+}
+
+.home-hero-role {
+  font-size: 0.95rem;
+  color: #bbb;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.home-hero-photo {
+  flex-shrink: 0;
+
+  img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid #80b8ff;
+    display: block;
+  }
+}
+
+// Book feature
+.home-book {
+  background: #f5f3ef;
+  padding: 3.5rem 0;
+  border-top: 1px solid #e4e0d8;
+  border-bottom: 1px solid #e4e0d8;
+}
+
+.home-book-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.home-book-cover {
+  flex-shrink: 0;
+
+  img {
+    width: 160px;
+    height: auto;
+    display: block;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+    border-radius: 2px;
+  }
+}
+
+.home-book-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #595959;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+}
+
+.home-book-title {
+  font-size: 1.45rem;
+  line-height: 1.3;
+  margin: 0 0 0.35rem;
+  border: none;
+  padding: 0;
+
+  a {
+    color: #1a1a1a;
+    text-decoration: none;
+
+    &:hover {
+      color: #1a5fb4;
+    }
+  }
+}
+
+.home-book-publisher {
+  font-size: 0.88rem;
+  color: #595959;
+  margin: 0 0 0.9rem;
+
+  a {
+    color: #595959;
+    &:hover { color: #1a5fb4; }
+  }
+}
+
+.home-book-desc {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  max-width: 540px;
+  margin: 0 0 0.65rem;
+}
+
+.home-book-award {
+  font-size: 0.88rem;
+  color: #595959;
+  margin: 0 0 1rem;
+}
+
+.home-book-link {
+  font-size: 0.95rem;
+  color: #1a5fb4;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// About / bio
+.home-about {
+  padding: 3rem 0 2.5rem;
+  background: #fff;
+}
+
+// Recent posts section
+.home-posts {
+  background: #f8f8f8;
+  padding: 3rem 0 3.5rem;
+  border-top: 1px solid #e8e8e8;
+
+  .home-posts-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+    color: #1a1a1a;
+  }
+}
+
+// Responsive: stack hero and book sections on narrow screens
+@media (max-width: 680px) {
+  .home-hero-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .home-hero-name {
+    font-size: 2rem;
+  }
+
+  .home-book-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-book-desc {
+    max-width: 100%;
+  }
+}
+
 // Home page post grid
 .post-list-with-thumbs {
   list-style: none;

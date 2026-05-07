@@ -2,15 +2,58 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+{%- comment -%} Hero section {%- endcomment -%}
+<section class="home-hero">
+  <div class="wrapper home-hero-inner">
+    <div class="home-hero-text">
+      <h1 class="home-hero-name">Sean Zdenek, PhD</h1>
+      <p class="home-hero-tagline">Access &middot; Sound &middot; Rhetoric &middot; Captioning &middot; Film/Media</p>
+      <p class="home-hero-role">Associate Professor of Technical and Professional Writing<br>University of Delaware</p>
+    </div>
+    <div class="home-hero-photo">
+      <img src="{{ '/assets/images/zdenek-headshot.jpg' | relative_url }}"
+           alt="Sean Zdenek"
+           width="260" height="260">
+    </div>
+  </div>
+</section>
 
-  <div class="home-intro">{{ content }}</div>
+{%- comment -%} Book feature section {%- endcomment -%}
+<section class="home-book">
+  <div class="wrapper home-book-inner">
+    <div class="home-book-cover">
+      <a href="https://press.uchicago.edu/ucp/books/book/chicago/R/bo21933882.html">
+        <img src="{{ '/assets/images/reading-sounds-cover.jpg' | relative_url }}"
+             alt="Reading Sounds: Closed-Captioned Media and Popular Culture — book cover"
+             width="180" height="273">
+      </a>
+    </div>
+    <div class="home-book-info">
+      <p class="home-book-label">book</p>
+      <h2 class="home-book-title">
+        <a href="https://press.uchicago.edu/ucp/books/book/chicago/R/bo21933882.html"><em>Reading Sounds: Closed-Captioned Media and Popular Culture</em></a>
+      </h2>
+      <p class="home-book-publisher">University of Chicago Press, 2015 &nbsp;&middot;&nbsp; <a href="http://ReadingSounds.net">ReadingSounds.net</a></p>
+      <p class="home-book-desc">A rhetorical analysis of closed captioning in popular culture — exploring how captions construct meaning, represent sound, and shape our experience of media.</p>
+      <p class="home-book-award">Winner: 2017 Best Book in Technical or Scientific Communication, CCCC/NCTE</p>
+      <a class="home-book-link" href="https://press.uchicago.edu/ucp/books/book/chicago/R/bo21933882.html">View at University of Chicago Press &rarr;</a>
+    </div>
+  </div>
+</section>
 
-  {%- if site.posts.size > 0 -%}
-<ul class="post-list post-list-with-thumbs">
+{%- comment -%} Bio / about section {%- endcomment -%}
+<section class="home-about">
+  <div class="wrapper">
+    <div class="home-intro">{{ content }}</div>
+  </div>
+</section>
+
+{%- comment -%} Recent posts section {%- endcomment -%}
+{%- if site.posts.size > 0 -%}
+<section class="home-posts">
+  <div class="wrapper">
+    <h2 class="home-posts-heading">Recent Writing</h2>
+    <ul class="post-list post-list-with-thumbs">
       {%- for post in site.posts -%}
       <li class="post-item{% if post.image %} has-thumb{% endif %}">
         {%- if post.image -%}
@@ -30,8 +73,7 @@ layout: default
       </li>
       {%- endfor -%}
     </ul>
-
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
-
-</div>
+  </div>
+</section>
+{%- endif -%}
