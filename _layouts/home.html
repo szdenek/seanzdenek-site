@@ -51,6 +51,21 @@ layout: default
   </div>
 </section>
 
+{%- comment -%} Selected publications section {%- endcomment -%}
+<section class="home-pubs">
+  <div class="wrapper home-pubs-inner">
+    <div class="home-pubs-photo">
+      <img src="{{ '/assets/images/film-payalnic.jpg' | relative_url }}"
+           alt="A film camera, film strip, and scissors on a surface"
+           width="180" height="273">
+      <p class="home-pubs-caption">&ldquo;film&rdquo; by payalnic is licensed under CC BY 2.0</p>
+    </div>
+    <div class="home-pubs-content">
+      <p class="home-book-label">selected publications</p>
+    </div>
+  </div>
+</section>
+
 {%- comment -%} Recent posts section {%- endcomment -%}
 {%- if site.posts.size > 0 -%}
 <section class="home-posts">
