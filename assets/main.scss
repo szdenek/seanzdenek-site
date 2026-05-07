@@ -299,11 +299,14 @@ body {
 
 .home-book-label {
   font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: #595959;
-  font-weight: 600;
   margin: 0 0 0.4rem;
+  padding: 0;
+  border: none;
 }
 
 .home-book-content {
