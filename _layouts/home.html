@@ -73,6 +73,20 @@ layout: default
   </div>
 </section>
 
+{%- comment -%} Blog posts section {%- endcomment -%}
+<section class="home-blog">
+  <div class="wrapper home-blog-inner">
+    <div class="home-blog-photo">
+      <img src="{{ '/assets/images/hypnotoad.jpg' | relative_url }}"
+           alt="Hypnotoad, a large frog with hypnotic eyes, from Futurama"
+           width="180" height="273">
+    </div>
+    <div class="home-blog-content">
+      <p class="home-book-label">blog posts</p>
+    </div>
+  </div>
+</section>
+
 {%- comment -%} Recent posts section {%- endcomment -%}
 {%- if site.posts.size > 0 -%}
 <section class="home-posts">
