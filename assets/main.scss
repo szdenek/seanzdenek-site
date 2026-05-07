@@ -441,6 +441,20 @@ body {
   flex: 1;
 }
 
+.home-pubs-list {
+  padding-left: 1.5rem;
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.85rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 // Recent posts section
 .home-posts {
   background: #f8f8f8;
