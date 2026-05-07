@@ -235,6 +235,12 @@ body {
 // Home page redesign — hero, book, about, posts
 // -----------------------------------------------
 
+// Remove top padding on page-content when hero is present
+// so the dark hero butts up against the sticky nav with no white gap
+.page-content:has(.home-hero) {
+  padding-top: 0;
+}
+
 // Hero
 .home-hero {
   background: #1a1a1a;
