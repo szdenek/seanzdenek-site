@@ -30,7 +30,7 @@ layout: default
         <p class="home-book-publisher">University of Chicago Press, 2015 &nbsp;&middot;&nbsp; <a href="http://ReadingSounds.net">ReadingSounds.net</a></p>
         <p class="home-book-desc">A rhetorical analysis of closed captioning in popular culture — exploring how captions construct meaning, represent sound, and shape our experience of media.</p>
         <p class="home-book-award">Winner: 2017 Best Book in Technical or Scientific Communication, CCCC/NCTE</p>
-        <a class="home-book-link" href="https://press.uchicago.edu/ucp/books/book/chicago/R/bo21933882.html">View at University of Chicago Press &rarr;</a>
+        <a class="home-book-link" href="https://press.uchicago.edu/ucp/books/book/chicago/R/bo21933882.html">View at University of Chicago Press <span aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
   </div>
@@ -55,10 +55,12 @@ layout: default
 <section class="home-pubs">
   <div class="wrapper home-pubs-inner">
     <div class="home-pubs-photo">
-      <img src="{{ '/assets/images/film-payalnic.jpg' | relative_url }}"
-           alt="A film camera, film strip, and scissors on a surface"
-           width="180" height="273">
-      <p class="home-pubs-caption">&ldquo;film&rdquo; by payalnic is licensed under CC BY 2.0</p>
+      <figure>
+        <img src="{{ '/assets/images/film-payalnic.jpg' | relative_url }}"
+             alt="A film camera, film strip, and scissors on a surface"
+             width="180" height="273">
+        <figcaption class="home-pubs-caption">&ldquo;film&rdquo; by payalnic is licensed under CC BY 2.0</figcaption>
+      </figure>
     </div>
     <div class="home-pubs-content">
       <h2 class="home-book-label">selected publications</h2>
@@ -67,7 +69,7 @@ layout: default
         <p>Zdenek, Sean (2018). <a href="https://readingsounds.net/wp-content/uploads/articles/Zdenek-guest-editor-intro-reimaginingdisability-CDQ2018.pdf">Guest Editor&rsquo;s Introduction: Reimagining Disability and Accessibility in Technical and Professional Communication</a>. <em>Communication Design Quarterly</em> 6(4), 4&ndash;11.</p>
         <p>Zdenek, Sean (2018). <a href="https://kairos.technorhetoric.net/23.1/topoi/zdenek/index.html">Designing Captions: Disruptive Experiments with Typography, Color, Icons, and Effects</a>. <em>Kairos: A Journal of Rhetoric, Technology, and Pedagogy</em> 23(1).</p>
         <p>Zdenek, Sean (2011). <a href="https://dsq-sds.org/article/id/1054/">Which Sounds Are Significant? Towards a Rhetoric of Closed Captioning</a>. <em>Disability Studies Quarterly</em> 31(3).</p>
-        <p>Zdenek, Sean (2009). <a href="/article-accessible-podcasting/">Accessible Podcasting: College Students on the Margins in the New Media Classroom</a>. <em>Computers &amp; Composition Online</em>. (<a href="http://cconlinejournal.org/Zdenek_Word_version_CConline.pdf">PDF</a>)</p>
+        <p>Zdenek, Sean (2009). <a href="/article-accessible-podcasting/">Accessible Podcasting: College Students on the Margins in the New Media Classroom</a>. <em>Computers &amp; Composition Online</em>. (<a href="http://cconlinejournal.org/Zdenek_Word_version_CConline.pdf" aria-label="Accessible Podcasting PDF">PDF</a>)</p>
       </div>
     </div>
   </div>
@@ -79,14 +81,14 @@ layout: default
     <div class="home-blog-photo">
       <a href="{{ '/blog/' | relative_url }}">
         <img src="{{ '/assets/images/hypnotoad.jpg' | relative_url }}"
-             alt="Hypnotoad, a large frog with hypnotic eyes, from Futurama"
+             alt="Browse all blog posts"
              width="180" height="273">
       </a>
     </div>
     <div class="home-blog-content">
       <h2 class="home-book-label">blog posts</h2>
       <div class="home-blog-text">
-        <p>Occasional writing on captioning, disability, film, and whatever Hypnotoad demands.<br><a href="{{ '/blog/' | relative_url }}">Browse all posts &rarr;</a></p>
+        <p>Occasional writing on captioning, disability, film, and whatever Hypnotoad demands.<br><a href="{{ '/blog/' | relative_url }}">Browse all posts <span aria-hidden="true">&rarr;</span></a></p>
       </div>
     </div>
   </div>
