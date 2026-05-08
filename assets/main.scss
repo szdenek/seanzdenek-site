@@ -536,8 +536,8 @@ body {
   .home-pubs-inner,
   .home-blog-inner {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .home-book-desc {
