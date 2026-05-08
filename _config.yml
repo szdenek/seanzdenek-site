@@ -37,7 +37,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/images/reading-sounds-cover.jpg
+      image: /assets/images/og-image.jpg
 
 # Exclude from processing
 exclude:
