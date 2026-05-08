@@ -6,3 +6,25 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+{% if page.url == '/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sean Zdenek",
+  "honorificSuffix": "PhD",
+  "jobTitle": "Associate Professor of Technical and Professional Writing",
+  "worksFor": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Delaware",
+    "url": "https://www.udel.edu"
+  },
+  "url": "https://seanzdenek.com",
+  "image": "https://seanzdenek.com/assets/images/zdenek-headshot.jpg",
+  "sameAs": [
+    "https://www.udel.edu/academics/colleges/cas/units/departments/english/our-people/sean-zdenek/"
+  ],
+  "knowsAbout": ["Closed captioning", "Disability studies", "Sound studies", "Technical communication", "Rhetoric"]
+}
+</script>
+{% endif %}
