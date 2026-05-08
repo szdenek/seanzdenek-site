@@ -405,19 +405,17 @@ body {
 
 .home-about-text {
   flex: 1;
-
-  // Override the global .home-intro centering so bio text
-  // indents exactly the same amount as the book blurb (1.5rem)
-  .home-intro {
-    max-width: none;
-    margin-left: 1.5rem;
-    margin-right: 0;
-  }
 }
 
-.home-about-link {
-  margin-left: 1.5rem;
-  display: inline-block;
+.home-about-content {
+  padding-left: 1.5rem;
+
+  // Override the global .home-intro centering
+  .home-intro {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 // Selected publications section
