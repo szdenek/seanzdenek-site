@@ -630,6 +630,106 @@ body {
   }
 }
 
+// Visually hidden utility (accessible labels)
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Search toggle button in nav
+.search-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 2rem;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  position: relative;
+  top: 1px;
+
+  &:hover {
+    color: #80b8ff;
+  }
+
+  &[aria-expanded="true"] {
+    color: #80b8ff;
+  }
+
+  svg { display: block; }
+}
+
+// Search bar that drops below the sticky header
+.site-search-bar {
+  background: #111;
+  border-bottom: 1px solid #333;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 1.5rem;
+  transition: max-height 0.2s ease, padding 0.2s ease;
+
+  .site-header.search-open & {
+    max-height: 72px;
+    padding: 0.85rem 1.5rem;
+  }
+}
+
+.site-search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+
+  input[type="search"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    border-radius: 0;
+    color: #fff;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &::placeholder { color: #777; }
+    &:focus { border-bottom-color: #80b8ff; }
+  }
+}
+
+.search-submit,
+.search-close {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  &:hover { color: #fff; }
+}
+
+// Search results page (Pagefind UI overrides)
+.search-page-wrap {
+  padding: 2rem 0;
+
+  h1 { margin-bottom: 1.5rem; }
+}
+
 // Home page post grid
 .post-list-with-thumbs {
   list-style: none;

@@ -24,8 +24,74 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.nav_title | default: my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
+          <button class="search-toggle" aria-label="Open search" aria-expanded="false" aria-controls="site-search-bar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
         </div>
       </nav>
     {%- endif -%}
   </div>
+
+  <div class="site-search-bar" id="site-search-bar">
+    <form class="site-search-form" action="/search/" method="get" role="search">
+      <label for="site-search-input" class="visually-hidden">Search seanzdenek.com</label>
+      <input type="search" id="site-search-input" name="q" placeholder="Search seanzdenek.com…" autocomplete="off" spellcheck="false">
+      <button type="submit" class="search-submit" aria-label="Submit search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+      <button type="button" class="search-close" aria-label="Close search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </form>
+  </div>
+
+  <script>
+  (function() {
+    var toggle = document.querySelector('.search-toggle');
+    var bar = document.getElementById('site-search-bar');
+    var input = document.getElementById('site-search-input');
+    var close = document.querySelector('.search-close');
+    var header = document.querySelector('.site-header');
+
+    if (!toggle || !bar) return;
+
+    function openSearch() {
+      header.classList.add('search-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      setTimeout(function() { input.focus(); }, 50);
+    }
+
+    function closeSearch() {
+      header.classList.remove('search-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
+
+    toggle.addEventListener('click', function() {
+      if (header.classList.contains('search-open')) {
+        closeSearch();
+      } else {
+        openSearch();
+      }
+    });
+
+    close.addEventListener('click', closeSearch);
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && header.classList.contains('search-open')) {
+        closeSearch();
+      }
+    });
+  })();
+  </script>
+
 </header>
