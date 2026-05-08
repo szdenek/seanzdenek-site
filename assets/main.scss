@@ -505,6 +505,19 @@ body {
   flex: 1;
 }
 
+.home-teaching-text {
+  padding-left: 1.5rem;
+
+  p, li {
+    font-size: 1.15rem;
+    line-height: 1.75;
+  }
+
+  ul {
+    margin-top: 0.5rem;
+  }
+}
+
 // Blog posts section
 .home-blog {
   background: #edf5eb;
