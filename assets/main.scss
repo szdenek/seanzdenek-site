@@ -581,6 +581,15 @@ body {
   }
 }
 
+// Rounded corners on all section images
+.home-book-cover img,
+.home-about-photo img,
+.home-pubs-photo img,
+.home-teaching-photo img,
+.home-blog-photo img {
+  border-radius: 10px;
+}
+
 // Responsive: stack sections on narrow screens
 @media (max-width: 680px) {
   .home-hero-name {
