@@ -32,6 +32,13 @@ include:
   - _pages
   - category
 
+# Default OG image for social sharing (used by jekyll-seo-tag)
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/reading-sounds-cover.jpg
+
 # Exclude from processing
 exclude:
   - Gemfile
