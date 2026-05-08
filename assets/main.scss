@@ -75,6 +75,14 @@ body {
   }
 }
 
+.site-logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  position: relative;
+  top: -1px;
+}
+
 .site-title,
 .site-title:visited {
   font-size: 1.6rem;
