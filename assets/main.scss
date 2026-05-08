@@ -543,6 +543,13 @@ body {
   .home-book-desc {
     max-width: 100%;
   }
+
+  .home-book-cover,
+  .home-about-photo,
+  .home-pubs-photo,
+  .home-blog-photo {
+    align-self: center;
+  }
 }
 
 // Home page post grid
