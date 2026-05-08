@@ -473,6 +473,38 @@ body {
   }
 }
 
+// Teaching section
+.home-teaching {
+  background: #fdf7e3;
+  padding: 3.5rem 0;
+  border-top: 1px solid #f0e4b8;
+  border-bottom: 1px solid #f0e4b8;
+}
+
+.home-teaching-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.home-teaching-photo {
+  flex-shrink: 0;
+
+  img {
+    width: 180px;
+    height: 273px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+    border-radius: 2px;
+  }
+}
+
+.home-teaching-content {
+  flex: 1;
+}
+
 // Blog posts section
 .home-blog {
   background: #edf5eb;
@@ -537,6 +569,7 @@ body {
   .home-book-inner,
   .home-about-inner,
   .home-pubs-inner,
+  .home-teaching-inner,
   .home-blog-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -550,6 +583,7 @@ body {
   .home-book-cover,
   .home-about-photo,
   .home-pubs-photo,
+  .home-teaching-photo,
   .home-blog-photo {
     align-self: center;
   }
