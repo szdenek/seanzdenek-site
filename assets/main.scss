@@ -619,6 +619,17 @@ body {
   }
 }
 
+// Respect reduced-motion preference
+@media (prefers-reduced-motion: reduce) {
+  .post-list-with-thumbs .post-item {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
 // Home page post grid
 .post-list-with-thumbs {
   list-style: none;
