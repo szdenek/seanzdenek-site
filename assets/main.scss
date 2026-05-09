@@ -230,6 +230,17 @@ body {
   margin-bottom: 0.1rem;
 }
 
+// Source / credit line under videos and images
+.source {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0.35rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
 // Images and spacing inside post body
 .post-content {
   img {
