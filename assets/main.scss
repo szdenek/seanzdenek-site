@@ -230,6 +230,29 @@ body {
   margin-bottom: 0.1rem;
 }
 
+// Images and spacing inside post body
+.post-content {
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.75rem auto;
+    border-radius: 2px;
+  }
+
+  p {
+    margin-bottom: 1.2rem;
+  }
+
+  blockquote {
+    margin: 1.5rem 0;
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+  }
+}
+
 // Featured image at top of individual blog posts
 .post-hero {
   margin: 0 0 1.5rem 0;
