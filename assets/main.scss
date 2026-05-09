@@ -243,6 +243,15 @@ body {
 
 // Images and spacing inside post body
 .post-content {
+  video {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    display: block;
+    margin: 1rem 0 0;
+    background: #000;
+  }
+
   img {
     display: block;
     max-width: 100%;
