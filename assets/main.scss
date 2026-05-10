@@ -790,6 +790,63 @@ body {
 }
 
 // Home page post grid
+// Blog filter chips
+.blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.blog-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f0f0f0;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+
+  &:hover {
+    background: #e0e0e0;
+    border-color: #bbb;
+  }
+
+  &.active {
+    background: #1a1a2e;
+    color: #fff;
+    border-color: #1a1a2e;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #1a5fb4;
+    outline-offset: 2px;
+  }
+}
+
+.chip-count {
+  background: rgba(0,0,0,0.12);
+  border-radius: 999px;
+  padding: 0 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  .active & {
+    background: rgba(255,255,255,0.2);
+  }
+}
+
+.blog-no-results {
+  color: #666;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
 .post-list-with-thumbs {
   list-style: none;
   margin-left: 0;

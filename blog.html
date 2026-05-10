@@ -9,10 +9,23 @@ search_exclude: true
 <div class="blog-page wrapper">
   <h1 class="page-heading">Blog Posts</h1>
 
+  <div class="blog-filters" role="group" aria-label="Filter posts by topic">
+    <button class="blog-filter-chip active" data-filter="all">All <span class="chip-count">{{ site.posts | size }}</span></button>
+    <button class="blog-filter-chip" data-filter="Non-Speech">Non-Speech <span class="chip-count">29</span></button>
+    <button class="blog-filter-chip" data-filter="Visual Design">Visual Design <span class="chip-count">17</span></button>
+    <button class="blog-filter-chip" data-filter="Speaker IDs">Speaker IDs <span class="chip-count">9</span></button>
+    <button class="blog-filter-chip" data-filter="Publishing">Publishing <span class="chip-count">7</span></button>
+    <button class="blog-filter-chip" data-filter="Timing">Timing <span class="chip-count">6</span></button>
+    <button class="blog-filter-chip" data-filter="Humor">Humor <span class="chip-count">6</span></button>
+    <button class="blog-filter-chip" data-filter="Data Mining">Data Mining <span class="chip-count">5</span></button>
+    <button class="blog-filter-chip" data-filter="Definitions">Definitions <span class="chip-count">5</span></button>
+    <button class="blog-filter-chip" data-filter="Music">Music <span class="chip-count">5</span></button>
+  </div>
+
   {%- if site.posts.size > 0 -%}
-  <ul class="post-list post-list-with-thumbs">
+  <ul class="post-list post-list-with-thumbs" id="post-list">
     {%- for post in site.posts -%}
-    <li class="post-item{% if post.image %} has-thumb{% endif %}">
+    <li class="post-item{% if post.image %} has-thumb{% endif %}" data-categories="{{ post.categories | join: '|' }}">
       {%- if post.image -%}
       <a class="post-thumb" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
         <img src="{{ post.image }}" alt="" width="500" height="250" loading="lazy">
@@ -30,6 +43,41 @@ search_exclude: true
     </li>
     {%- endfor -%}
   </ul>
+
+  <p class="blog-no-results" id="no-results" style="display:none;">No posts found for this topic.</p>
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
 </div>
+
+<script>
+(function() {
+  var chips = document.querySelectorAll('.blog-filter-chip');
+  var items = document.querySelectorAll('#post-list .post-item');
+  var noResults = document.getElementById('no-results');
+
+  chips.forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      var filter = this.getAttribute('data-filter');
+
+      // Update active chip
+      chips.forEach(function(c) {
+        c.classList.remove('active');
+        c.setAttribute('aria-pressed', 'false');
+      });
+      this.classList.add('active');
+      this.setAttribute('aria-pressed', 'true');
+
+      // Filter posts
+      var visible = 0;
+      items.forEach(function(item) {
+        var cats = item.getAttribute('data-categories');
+        var show = filter === 'all' || cats.indexOf(filter) !== -1;
+        item.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+
+      noResults.style.display = visible === 0 ? 'block' : 'none';
+    });
+  });
+})();
+</script>
