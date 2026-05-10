@@ -65,6 +65,9 @@
     if (!toggle || !bar) return;
 
     function openSearch() {
+      // Close the hamburger menu if open on mobile
+      var navTrigger = document.getElementById('nav-trigger');
+      if (navTrigger) navTrigger.checked = false;
       header.classList.add('search-open');
       toggle.setAttribute('aria-expanded', 'true');
       setTimeout(function() { input.focus(); }, 50);
