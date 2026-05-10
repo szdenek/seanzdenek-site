@@ -112,7 +112,11 @@ body {
     }
   }
 
-  // Mobile nav toggle (hamburger) color
+  // Mobile nav: left-align links and dark background
+  @media (max-width: 600px) {
+    text-align: left;
+  }
+
   .nav-trigger:checked ~ .trigger {
     background: #1a1a1a;
   }
