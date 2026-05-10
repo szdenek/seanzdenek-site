@@ -9,7 +9,7 @@
 
     {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content" id="main-content">
+    <main class="page-content" aria-label="Content" id="main-content"{% if page.search_exclude %} data-pagefind-ignore="all"{% endif %}>
       {%- if page.layout == 'home' -%}
         {{ content }}
       {%- else -%}
