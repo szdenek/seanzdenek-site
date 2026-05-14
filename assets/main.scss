@@ -81,6 +81,11 @@ body {
   margin-right: 0.5rem;
   position: relative;
   top: -1px;
+  .logo-bar { fill: white; transition: fill 0.15s ease; }
+}
+
+.site-title:hover .site-logo .logo-bar {
+  fill: #80b8ff;
 }
 
 .site-title,

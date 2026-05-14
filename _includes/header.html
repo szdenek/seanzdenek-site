@@ -4,7 +4,7 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
-      <img src="{{ '/favicon.svg' | relative_url }}" alt="" aria-hidden="true" class="site-logo" width="24" height="24">{{ site.title | escape }}</a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" class="site-logo" width="24" height="24"><rect width="32" height="32" rx="6" fill="#111"/><rect x="3" y="14" width="4" height="12" rx="1" class="logo-bar"/><rect x="9" y="8" width="4" height="18" rx="1" class="logo-bar"/><rect x="15" y="4" width="4" height="22" rx="1" class="logo-bar"/><rect x="21" y="10" width="4" height="16" rx="1" class="logo-bar"/><rect x="27" y="17" width="4" height="9" rx="1" class="logo-bar"/></svg>{{ site.title | escape }}</a>
 
     {%- if page_paths -%}
       <nav class="site-nav">
