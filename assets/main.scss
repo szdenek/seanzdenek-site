@@ -933,18 +933,22 @@ details + h3 {
 }
 
 details > summary {
-  display: flex;
+  display: flex !important;
+  flex-direction: row;
   align-items: center;
   gap: 0.4rem;
   cursor: pointer;
   list-style: none;
 
+  // Suppress native disclosure markers (webkit + standard)
   &::-webkit-details-marker { display: none; }
+  &::marker { content: ""; }
 
   &::before {
     content: "▶";
     font-size: 0.65em;
     flex-shrink: 0;
+    line-height: 1;
   }
 }
 
