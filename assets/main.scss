@@ -940,7 +940,7 @@ details + h3 {
 details > summary {
   display: flex !important;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.4rem;
   cursor: pointer;
   list-style: none;
