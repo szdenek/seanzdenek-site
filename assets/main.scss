@@ -923,6 +923,11 @@ body {
   }
 }
 
+// Offset anchor scroll targets so sticky nav doesn't cover headings
+h1, h2, h3, h4 {
+  scroll-margin-top: 70px;
+}
+
 details + h3 {
   margin-top: 2rem;
 }
