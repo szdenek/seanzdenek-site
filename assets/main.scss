@@ -927,8 +927,27 @@ details + h3 {
   margin-top: 2rem;
 }
 
+details > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  list-style: none;
+
+  &::-webkit-details-marker { display: none; }
+
+  &::before {
+    content: "▶";
+    font-size: 0.65em;
+    flex-shrink: 0;
+  }
+}
+
+details[open] > summary::before {
+  content: "▼";
+}
+
 details summary h4 {
-  display: inline;
   margin: 0;
   font-size: 1.15rem;
   font-weight: bold;
