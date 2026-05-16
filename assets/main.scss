@@ -940,7 +940,7 @@ details + h3 {
 details > summary {
   display: flex !important;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: baseline;
   gap: 0.4rem;
   cursor: pointer;
   list-style: none;
@@ -953,8 +953,6 @@ details > summary {
     content: "▶";
     font-size: 0.65em;
     flex-shrink: 0;
-    line-height: 1;
-    padding-top: 0.3em;
   }
 }
 
