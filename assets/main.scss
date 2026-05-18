@@ -924,6 +924,40 @@ body {
   }
 }
 
+// Share bar on blog posts
+.post-share {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.post-share-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-right: 0.25rem;
+}
+
+.post-share-link {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+
+  &:hover { opacity: 0.85; text-decoration: none; color: #fff; }
+}
+
+.post-share-bluesky  { background: #0085ff; }
+.post-share-facebook { background: #1877f2; }
+.post-share-twitter  { background: #000; }
+.post-share-email    { background: #555; }
+
 // Offset anchor scroll targets so sticky nav doesn't cover headings
 h1, h2, h3, h4 {
   scroll-margin-top: 70px;

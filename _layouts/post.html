@@ -32,6 +32,14 @@ layout: default
     {{ content }}
   </div>
 
+  <div class="post-share">
+    <span class="post-share-label">Share:</span>
+    <a class="post-share-link post-share-bluesky" href="https://bsky.app/intent/compose?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer">Bluesky</a>
+    <a class="post-share-link post-share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a class="post-share-link post-share-twitter" href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer">Twitter</a>
+    <a class="post-share-link post-share-email" href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url | url_encode }}">Email</a>
+  </div>
+
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
