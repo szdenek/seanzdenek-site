@@ -34,11 +34,11 @@ layout: default
     <a class="post-share-link post-share-bluesky" href="https://bsky.app/intent/compose?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Bluesky">
       <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
     </a>
-    <a class="post-share-link post-share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
-      <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-    </a>
     <a class="post-share-link post-share-twitter" href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter">
       <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+    </a>
+    <a class="post-share-link post-share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
+      <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
     </a>
     <a class="post-share-link post-share-email" href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url | url_encode }}" aria-label="Share by email">
       <i class="fa-solid fa-envelope" aria-hidden="true"></i>
