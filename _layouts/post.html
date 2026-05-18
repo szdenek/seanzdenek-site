@@ -63,4 +63,15 @@ layout: default
     hideControls: true,
     resetOnEnd: false,
   });
+
+  // Force captions on by default for native (non-Plyr) videos
+  document.querySelectorAll('video.native-captions').forEach(function(video) {
+    function enableTracks() {
+      for (var i = 0; i < video.textTracks.length; i++) {
+        video.textTracks[i].mode = 'showing';
+      }
+    }
+    enableTracks();
+    video.textTracks.addEventListener('addtrack', enableTracks);
+  });
 </script>
