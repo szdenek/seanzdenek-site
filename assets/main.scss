@@ -955,6 +955,7 @@ body {
 
   font-size: 1.1rem;
 
+  &:visited { color: #fff; }
   &:hover { opacity: 0.85; transform: scale(1.1); text-decoration: none; color: #fff; }
 }
 
