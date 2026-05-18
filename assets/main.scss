@@ -959,10 +959,10 @@ body {
   &:hover { opacity: 0.85; transform: scale(1.1); text-decoration: none; color: #fff; }
 }
 
-.post-share-bluesky  { background: #0085ff; }
-.post-share-facebook { background: #1877f2; }
-.post-share-twitter  { background: #000; }
-.post-share-email    { background: #555; }
+.post-share-bluesky  { background: #0085ff; &:visited { background: #0085ff; } }
+.post-share-facebook { background: #1877f2; &:visited { background: #1877f2; } }
+.post-share-twitter  { background: #000;    &:visited { background: #000; } }
+.post-share-email    { background: #555;    &:visited { background: #555; } }
 
 // Offset anchor scroll targets so sticky nav doesn't cover headings
 h1, h2, h3, h4 {
