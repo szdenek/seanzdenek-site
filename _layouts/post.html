@@ -30,10 +30,18 @@ layout: default
 
   <div class="post-share">
     <span class="post-share-label">Share:</span>
-    <a class="post-share-link post-share-bluesky" href="https://bsky.app/intent/compose?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer">Bluesky</a>
-    <a class="post-share-link post-share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer">Facebook</a>
-    <a class="post-share-link post-share-twitter" href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer">Twitter</a>
-    <a class="post-share-link post-share-email" href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url | url_encode }}">Email</a>
+    <a class="post-share-link post-share-bluesky" href="https://bsky.app/intent/compose?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Bluesky">
+      <svg viewBox="0 0 600 530" fill="currentColor" aria-hidden="true"><path d="M135.72 44.03C202.216 93.99 273.74 195.87 300 249.49c26.262-53.618 97.782-155.5 164.28-205.46C512.26 8.009 596 -8.581 596 109.37c0 24.427-13.985 205.23-22.158 234.68-28.467 101.66-132.29 127.52-224.45 111.82 161.03 27.396 201.93 118.18 113.58 209.01-168.01 172.28-241.55-43.24-259.12-98.489-2.982-8.76-4.375-12.858-4.373-9.385.002-3.473-1.391.625-4.373 9.385-17.569 55.245-91.117 270.77-259.12 98.489-88.352-90.826-47.443-181.61 113.58-209.01C61.986 471.57-41.836 445.71-70.303 344.05-78.476 314.6-92.461 133.79-92.461 109.37c0-117.95 83.739-101.36 135.72-65.34H135.72z"/></svg>
+    </a>
+    <a class="post-share-link post-share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <a class="post-share-link post-share-twitter" href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+    <a class="post-share-link post-share-email" href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url | url_encode }}" aria-label="Share by email">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+    </a>
   </div>
 
   <div class="post-content e-content" itemprop="articleBody">
