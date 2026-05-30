@@ -56,6 +56,82 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
+<script>
+  // VideoObject structured data for Google video indexing.
+  // Runs before Plyr so original src/poster attributes are intact.
+  (function() {
+    var videos = document.querySelectorAll('.post-content video');
+    if (!videos.length) return;
+
+    var uploadDate = '{{ page.date | date: "%Y-%m-%dT00:00:00+00:00" }}';
+    var pageDesc   = {{ page.description | jsonify }};
+    var pageTitle  = {{ page.title | jsonify }};
+    var schemas    = [];
+
+    Array.prototype.forEach.call(videos, function(video) {
+      // Thumbnail is required by Google — skip videos without one
+      var poster = video.getAttribute('poster');
+      if (!poster) return;
+
+      // Prefer the mp4 source; fall back to first <source> or src attribute
+      var src = null;
+      var mp4 = video.querySelector('source[type="video/mp4"]');
+      if (mp4) {
+        src = mp4.getAttribute('src');
+      } else {
+        var first = video.querySelector('source');
+        src = first ? first.getAttribute('src') : video.getAttribute('src');
+      }
+      if (!src) return;
+
+      // Skip old broken WordPress-relative paths
+      if (src.indexOf('wp-content') !== -1 || src.indexOf('../') !== -1) return;
+
+      // Ensure absolute URLs
+      var base = 'https://seanzdenek.com';
+      if (src.indexOf('//') === 0)    src    = 'https:' + src;
+      if (src.charAt(0) === '/')      src    = base + src;
+      if (poster.indexOf('//') === 0) poster = 'https:' + poster;
+      if (poster.charAt(0) === '/')   poster = base + poster;
+
+      // Walk backward through element siblings to find nearest heading
+      var title = pageTitle;
+      var el = video.previousElementSibling;
+      while (el) {
+        if (/^H[1-6]$/.test(el.tagName)) { title = el.textContent.trim(); break; }
+        el = el.previousElementSibling;
+      }
+      // If inside a <p> or other wrapper, check the parent's siblings too
+      if (title === pageTitle) {
+        var parent = video.parentElement;
+        if (parent && parent !== document.body) {
+          el = parent.previousElementSibling;
+          while (el) {
+            if (/^H[1-6]$/.test(el.tagName)) { title = el.textContent.trim(); break; }
+            el = el.previousElementSibling;
+          }
+        }
+      }
+
+      schemas.push({
+        '@type':        'VideoObject',
+        'name':         title,
+        'description':  pageDesc,
+        'thumbnailUrl': poster,
+        'uploadDate':   uploadDate,
+        'contentUrl':   src
+      });
+    });
+
+    if (!schemas.length) return;
+
+    var ld = document.createElement('script');
+    ld.type = 'application/ld+json';
+    ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': schemas });
+    document.head.appendChild(ld);
+  })();
+</script>
+
 <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 <script>
   Plyr.setup('.post-content video:not(.native-captions)', {
