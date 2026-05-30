@@ -84,9 +84,6 @@ layout: default
       }
       if (!src) return;
 
-      // Skip old broken WordPress-relative paths
-      if (src.indexOf('wp-content') !== -1 || src.indexOf('../') !== -1) return;
-
       // Ensure absolute URLs
       var base = 'https://seanzdenek.com';
       if (src.indexOf('//') === 0)    src    = 'https:' + src;
