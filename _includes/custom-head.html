@@ -53,6 +53,22 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+{% if page.citation_title %}
+<meta name="citation_title" content="{{ page.citation_title | escape }}">
+<meta name="citation_author" content="{{ page.citation_author | escape }}">
+<meta name="citation_journal_title" content="{{ page.citation_journal_title | escape }}">
+<meta name="citation_publication_date" content="{{ page.citation_publication_date | escape }}">
+<meta name="citation_language" content="{{ page.citation_language | default: 'en' }}">
+<meta name="citation_abstract_html_url" content="{{ page.citation_abstract_html_url }}">
+{% if page.citation_doi %}<meta name="citation_doi" content="{{ page.citation_doi }}">{% endif %}
+<meta name="DC.title" content="{{ page.citation_title | escape }}">
+<meta name="DC.creator" content="{{ page.citation_author | escape }}">
+<meta name="DC.date" content="{{ page.citation_publication_date | escape }}">
+<meta name="DC.source" content="{{ page.citation_journal_title | escape }}">
+<meta name="DC.identifier" content="{{ page.citation_abstract_html_url }}">
+<meta name="DC.language" content="{{ page.citation_language | default: 'en' }}">
+<meta name="DC.type" content="Journal Article">
+{% endif %}
 {% if page.url == '/' %}
 <script type="application/ld+json">
 {
