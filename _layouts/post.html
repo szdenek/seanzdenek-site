@@ -2,6 +2,7 @@
 layout: default
 ---
 <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous">
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -28,6 +29,22 @@ layout: default
   </figure>
   {%- endif -%}
 
+  <div class="post-share">
+    <span class="post-share-label">Share:</span>
+    <a class="post-share-link post-share-bluesky" href="https://bsky.app/intent/compose?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Bluesky">
+      <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
+    </a>
+    <a class="post-share-link post-share-twitter" href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter">
+      <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+    </a>
+    <a class="post-share-link post-share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
+      <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+    </a>
+    <a class="post-share-link post-share-email" href="mailto:?subject={{ page.title | url_encode }}&body={{ page.url | absolute_url | url_encode }}" aria-label="Share by email">
+      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+    </a>
+  </div>
+
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
@@ -39,11 +56,95 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
+<script>
+  // VideoObject structured data for Google video indexing.
+  // Runs before Plyr so original src/poster attributes are intact.
+  (function() {
+    var videos = document.querySelectorAll('.post-content video');
+    if (!videos.length) return;
+
+    var uploadDate = '{{ page.date | date: "%Y-%m-%dT00:00:00+00:00" }}';
+    var pageDesc   = {{ page.description | jsonify }};
+    var pageTitle  = {{ page.title | jsonify }};
+    var schemas    = [];
+
+    Array.prototype.forEach.call(videos, function(video) {
+      // Thumbnail is required by Google — skip videos without one
+      var poster = video.getAttribute('poster');
+      if (!poster) return;
+
+      // Prefer the mp4 source; fall back to first <source> or src attribute
+      var src = null;
+      var mp4 = video.querySelector('source[type="video/mp4"]');
+      if (mp4) {
+        src = mp4.getAttribute('src');
+      } else {
+        var first = video.querySelector('source');
+        src = first ? first.getAttribute('src') : video.getAttribute('src');
+      }
+      if (!src) return;
+
+      // Ensure absolute URLs
+      var base = 'https://seanzdenek.com';
+      if (src.indexOf('//') === 0)    src    = 'https:' + src;
+      if (src.charAt(0) === '/')      src    = base + src;
+      if (poster.indexOf('//') === 0) poster = 'https:' + poster;
+      if (poster.charAt(0) === '/')   poster = base + poster;
+
+      // Walk backward through element siblings to find nearest heading
+      var title = pageTitle;
+      var el = video.previousElementSibling;
+      while (el) {
+        if (/^H[1-6]$/.test(el.tagName)) { title = el.textContent.trim(); break; }
+        el = el.previousElementSibling;
+      }
+      // If inside a <p> or other wrapper, check the parent's siblings too
+      if (title === pageTitle) {
+        var parent = video.parentElement;
+        if (parent && parent !== document.body) {
+          el = parent.previousElementSibling;
+          while (el) {
+            if (/^H[1-6]$/.test(el.tagName)) { title = el.textContent.trim(); break; }
+            el = el.previousElementSibling;
+          }
+        }
+      }
+
+      schemas.push({
+        '@type':        'VideoObject',
+        'name':         title,
+        'description':  pageDesc,
+        'thumbnailUrl': poster,
+        'uploadDate':   uploadDate,
+        'contentUrl':   src
+      });
+    });
+
+    if (!schemas.length) return;
+
+    var ld = document.createElement('script');
+    ld.type = 'application/ld+json';
+    ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': schemas });
+    document.head.appendChild(ld);
+  })();
+</script>
+
 <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 <script>
-  Plyr.setup('.post-content video', {
-    controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+  Plyr.setup('.post-content video:not(.native-captions)', {
+    controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'fullscreen'],
     hideControls: true,
     resetOnEnd: false,
+  });
+
+  // Force captions on by default for native (non-Plyr) videos
+  document.querySelectorAll('video.native-captions').forEach(function(video) {
+    function enableTracks() {
+      for (var i = 0; i < video.textTracks.length; i++) {
+        video.textTracks[i].mode = 'showing';
+      }
+    }
+    enableTracks();
+    video.textTracks.addEventListener('addtrack', enableTracks);
   });
 </script>

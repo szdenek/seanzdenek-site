@@ -924,6 +924,46 @@ body {
   }
 }
 
+// Share bar on blog posts
+.post-share {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.post-share-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-right: 0.25rem;
+}
+
+.post-share-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+
+  font-size: 1.1rem;
+
+  &:visited { color: #fff; }
+  &:hover { opacity: 0.85; transform: scale(1.1); text-decoration: none; color: #fff; }
+}
+
+.post-share-bluesky  { background: #0085ff; &:visited { background: #0085ff; } }
+.post-share-facebook { background: #1877f2; &:visited { background: #1877f2; } }
+.post-share-twitter  { background: #000;    &:visited { background: #000; } }
+.post-share-email    { background: #555;    &:visited { background: #555; } }
+
 // Offset anchor scroll targets so sticky nav doesn't cover headings
 h1, h2, h3, h4 {
   scroll-margin-top: 70px;
