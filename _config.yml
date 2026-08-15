@@ -49,6 +49,3 @@ exclude:
   - vendor/
   - .sass-cache/
   - .jekyll-cache/
-  # Unpublished at Sean's request (2026-08-15) — file stays in the repo,
-  # just dropped from the build. Remove this line to bring it back live.
-  - thrum/
