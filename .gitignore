@@ -4,6 +4,3 @@ _site
 .jekyll-metadata
 vendor
 .DS_Store
-
-# Unpublished at Sean's request (2026-08-15) — kept locally, out of git
-thrum/
