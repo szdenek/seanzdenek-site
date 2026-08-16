@@ -454,6 +454,35 @@ body {
   }
 }
 
+// Thrum project
+.home-thrum {
+  background: #fdf1e4;
+  padding: 3.5rem 0;
+  border-top: 1px solid #f0dcc0;
+  border-bottom: 1px solid #f0dcc0;
+}
+
+.home-thrum-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.home-thrum-icon {
+  flex-shrink: 0;
+
+  img {
+    width: 180px;
+    height: auto;
+    display: block;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.home-thrum-content {
+  padding-left: 1.5rem;
+}
+
 // About / bio
 .home-about {
   padding: 3rem 0 2.5rem;
@@ -655,7 +684,8 @@ body {
 .home-about-photo img,
 .home-pubs-photo img,
 .home-teaching-photo img,
-.home-blog-photo img {
+.home-blog-photo img,
+.home-thrum-icon img {
   border-radius: 10px;
 }
 
@@ -669,7 +699,8 @@ body {
   .home-about-inner,
   .home-pubs-inner,
   .home-teaching-inner,
-  .home-blog-inner {
+  .home-blog-inner,
+  .home-thrum-inner {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
@@ -683,7 +714,8 @@ body {
   .home-about-photo,
   .home-pubs-photo,
   .home-teaching-photo,
-  .home-blog-photo {
+  .home-blog-photo,
+  .home-thrum-icon {
     align-self: center;
   }
 }
