@@ -11,6 +11,7 @@ sitemap: false
     --bg: #14181C;
     --surface: #1B2126;
     --surface-raised: #21272D;
+    --tone-c: #26201A;
     --ink: #ECEAE2;
     --ink-soft: #9BA39E;
     --ink-faint: #878F88;
@@ -25,6 +26,7 @@ sitemap: false
     --bg: #F4F1EA;
     --surface: #FFFFFF;
     --surface-raised: #FBFAF7;
+    --tone-c: #F6E9D0;
     --ink: #171B19;
     --ink-soft: #545C58;
     --ink-faint: #646B67;
@@ -40,6 +42,7 @@ sitemap: false
       --bg: #F4F1EA;
       --surface: #FFFFFF;
       --surface-raised: #FBFAF7;
+      --tone-c: #F6E9D0;
       --ink: #171B19;
       --ink-soft: #545C58;
       --ink-faint: #646B67;
@@ -342,6 +345,7 @@ sitemap: false
      already used (surface + top border), just extended to give each
      section clearer visual separation without introducing new colors. */
   .tone-b { background: var(--surface); border-top: 1px solid var(--line); }
+  .tone-c { background: var(--tone-c); border-top: 1px solid var(--line); }
 
   /* ---------- Quote / positioning band ---------- */
   .band {
@@ -515,7 +519,7 @@ sitemap: false
   </div>
 </section>
 
-<section class="section tone-b" style="padding-top: 56px;">
+<section class="section tone-c" style="padding-top: 56px;">
   <div class="wrap">
     <p class="section-label">Quick picks</p>
     <h2 class="section-title">A mood for every night</h2>
