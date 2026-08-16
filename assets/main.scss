@@ -329,7 +329,8 @@ body {
 
 // Remove top padding on page-content when hero is present
 // so the dark hero butts up against the sticky nav with no white gap
-.page-content:has(.home-hero) {
+.page-content:has(.home-hero),
+.page-content:has(.hero) {
   padding-top: 0;
   padding-bottom: 0;
 }
