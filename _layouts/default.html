@@ -10,7 +10,7 @@
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content" id="main-content"{% if page.search_exclude %} data-pagefind-ignore="all"{% endif %}>
-      {%- if page.layout == 'home' -%}
+      {%- if page.layout == 'home' or page.full_bleed -%}
         {{ content }}
       {%- else -%}
       <div class="wrapper">
@@ -19,7 +19,9 @@
       {%- endif -%}
     </main>
 
+    {%- unless page.full_bleed -%}
     {%- include footer.html -%}
+    {%- endunless -%}
 
   </body>
 

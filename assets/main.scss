@@ -66,6 +66,10 @@ body {
   z-index: 100;
   background: #1a1a1a;
   border-bottom: none;
+  // Pinned explicitly so pages with their own body font-family (e.g. /thrum)
+  // can't cascade into the header, since .site-title/.site-nav otherwise
+  // just inherit whatever font-family is on body.
+  font-family: 'DM Sans', system-ui, sans-serif;
 
   // Full-width inner wrapper, name flush to left edge
   .wrapper {
