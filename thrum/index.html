@@ -81,9 +81,37 @@ sitemap: false
   }
   .hero-inner { position: relative; }
   .wordmark {
+    position: relative;
     font-size: clamp(56px, 10vw, 96px);
     margin: 0;
     color: var(--ink);
+  }
+  /* Breathing glow behind the title, matching the app's own sign-in
+     screen (ThrumPulse in AuthScreen.tsx) — same 1.6s ease-in-out
+     timing, same scale/opacity range, same amber color. The app fakes
+     a radial gradient with three stacked circles since React Native
+     has no native radial-gradient support; here we can just use a
+     real one. */
+  .wordmark::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    height: 340px;
+    transform: translate(-50%, -50%) scale(0.88);
+    background: radial-gradient(circle, rgba(240, 169, 78, 0.35) 0%, rgba(240, 169, 78, 0.18) 47%, rgba(240, 169, 78, 0.08) 71%, transparent 100%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+    animation: thrumPulse 1.6s ease-in-out infinite alternate;
+  }
+  @keyframes thrumPulse {
+    from { transform: translate(-50%, -50%) scale(0.88); opacity: 0.65; }
+    to   { transform: translate(-50%, -50%) scale(1.08); opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .wordmark::before { animation: none; opacity: 0.85; }
   }
   .tagline {
     font-size: clamp(20px, 3vw, 28px);
