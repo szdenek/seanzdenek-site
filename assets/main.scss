@@ -486,6 +486,15 @@ body {
 
 .home-thrum-content {
   padding-left: 1.5rem;
+
+  // Thrum reuses .home-book-desc for its paragraph, but Book's 540px cap
+  // wraps noticeably shorter than every other section on the page (Pubs,
+  // Teaching, and Blog all run uncapped) — widen and match their line
+  // height here without touching Book's own narrower measure.
+  .home-book-desc {
+    max-width: none;
+    line-height: 1.75;
+  }
 }
 
 // About / bio
