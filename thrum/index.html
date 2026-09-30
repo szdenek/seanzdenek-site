@@ -146,7 +146,7 @@ full_bleed: true
     box-shadow: 0 30px 60px rgba(0,0,0,0.5);
     overflow: hidden;
   }
-  .hero-photo-phone img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero-photo-phone img, .hero-photo-phone video { width: 100%; height: 100%; object-fit: cover; display: block; }
   .hero-photo-phone::before {
     content: "";
     position: absolute;
@@ -453,7 +453,10 @@ full_bleed: true
   <div class="hero-wordmark">Thrum</div>
   <div class="hero-photo-content">
     <div class="hero-photo-phone">
-      <img src="../assets/images/thrum-hero-phone-screen.gif" alt="Animation of the Thrum swipe deck: liking one title, then passing on the next" />
+      <video autoplay muted loop playsinline onloadedmetadata="this.play().catch(function(){})" aria-label="Animation of the Thrum swipe deck: liking one title, then passing on the next">
+        <source src="../assets/images/thrum-hero-phone-screen.webm" type="video/webm">
+        <source src="../assets/images/thrum-hero-phone-screen.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="hero-photo-text">
       <p class="hero-photo-eyebrow">Thrum</p>
