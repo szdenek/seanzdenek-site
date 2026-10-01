@@ -134,8 +134,34 @@ full_bleed: true
     border: 7px solid var(--surface-raised);
     box-shadow: 0 30px 60px rgba(0,0,0,0.5);
     overflow: hidden;
+    container-type: inline-size;
   }
   .hero-photo-phone img, .hero-photo-phone video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* The demo video has Like/Pass buttons baked into the recording, and the
+     heart/X glyphs render a few px high inside their circles (a web-font
+     line-height quirk at record time) — too fiddly to fix by re-recording,
+     so these two divs sit exactly on top of the baked-in circles (same
+     fill/border/shadow, measured from the video frame) and just redraw the
+     icon dead center. cqw keeps everything proportional to the phone's own
+     width at any screen size, matching how the video itself scales. */
+  .hero-photo-swipe-icon {
+    position: absolute;
+    left: 89.76%;
+    width: 11.67cqw;
+    height: 11.67cqw;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ECEAE2;
+    font-size: 5.6cqw;
+    line-height: 1;
+    pointer-events: none;
+    box-shadow: 0 0.6cqw 1.2cqw rgba(0,0,0,0.2);
+  }
+  .hero-photo-swipe-icon.like { top: 39.98%; background: #1B2620; border: 0.4cqw solid #6FB07D; }
+  .hero-photo-swipe-icon.pass { top: 48.13%; background: #2A1F1B; border: 0.4cqw solid #DB8467; }
   .hero-photo-phone::before {
     content: "";
     position: absolute;
@@ -445,6 +471,8 @@ full_bleed: true
         <source src="../assets/images/thrum-hero-phone-screen-v9.webm" type="video/webm">
         <source src="../assets/images/thrum-hero-phone-screen-v9.mp4" type="video/mp4">
       </video>
+      <div class="hero-photo-swipe-icon like" aria-hidden="true">&#9829;</div>
+      <div class="hero-photo-swipe-icon pass" aria-hidden="true">&#10005;</div>
     </div>
     <div class="hero-photo-text">
       <p class="hero-photo-eyebrow">Thrum</p>
