@@ -143,23 +143,19 @@ full_bleed: true
      so these two divs sit exactly on top of the baked-in circles (same
      fill/border/shadow, measured from the video frame) and just redraw the
      icon dead center. cqw keeps everything proportional to the phone's own
-     width at any screen size, matching how the video itself scales.
-     Sized a bit larger than the measured baked-in circle (which is ~54-56px
-     across including its anti-aliased border edge, at a 420px-wide frame)
-     so this fully covers it with margin to spare — undersizing it left a
-     sliver of the old circle visible as a double ring. */
+     width at any screen size, matching how the video itself scales. */
   .hero-photo-swipe-icon {
     position: absolute;
     left: 89.76%;
-    width: 13cqw;
-    height: 13cqw;
+    width: 11.67cqw;
+    height: 11.67cqw;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ECEAE2;
-    font-size: 5.8cqw;
+    font-size: 5.6cqw;
     line-height: 1;
     pointer-events: none;
     box-shadow: 0 0.6cqw 1.2cqw rgba(0,0,0,0.2);
