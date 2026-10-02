@@ -190,6 +190,9 @@ full_bleed: true
   .cta-row img { height: 50px; width: auto; display: block; }
   .cta-row a { display: inline-block; transition: transform 0.15s ease, opacity 0.15s ease; }
   .cta-row a:hover { transform: translateY(-2px); opacity: 0.92; }
+  /* Match Apple's badge height beside it (hero: 50px, final CTA: 82px). */
+  .cta-row img.gplay-badge { height: 50px; }
+  .cta-row img.gplay-badge.gplay-badge-lg { height: 82px; }
 
   /* ---------- How it works ---------- */
   .section { padding: 84px 28px; }
@@ -454,9 +457,9 @@ full_bleed: true
         <a href="https://apps.apple.com/us/app/thrum-movie-matching-app/id6795717175?itscg=30200&itsct=apps_box_badge&mttnsubad=6795717175" aria-label="Download Thrum on the App Store">
           <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1790640000" alt="Download on the App Store" />
         </a>
-        <!-- Google Play badge: add back once Android has cleared Play Store review.
-             Was linking to https://play.google.com/store/apps/details?id=com.thrummoviefinder.thrum
-             Badge asset already sits at ../assets/images/google-play-badge.png -->
+        <a href="https://play.google.com/store/apps/details?id=com.thrummoviefinder.thrum" aria-label="Get Thrum on Google Play">
+          <img src="../assets/images/google-play-badge.png" alt="Get it on Google Play" class="gplay-badge" />
+        </a>
       </div>
     </div>
   </div>
@@ -622,10 +625,13 @@ full_bleed: true
 
 <section class="final-cta">
   <h2 class="section-title" style="margin-bottom: 10px;">Download Thrum</h2>
-  <p class="section-sub" style="margin-left:auto;margin-right:auto;text-align:center;">Thrum is live on the App Store. Swipe through movies with the people you actually watch with.</p>
+  <p class="section-sub" style="margin-left:auto;margin-right:auto;text-align:center;">Thrum is live on the App Store and Google Play. Swipe through movies with the people you actually watch with.</p>
   <div class="cta-row">
     <a href="https://apps.apple.com/us/app/thrum-movie-matching-app/id6795717175?itscg=30200&itsct=apps_box_badge&mttnsubad=6795717175" style="display: inline-block;">
       <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1790640000" alt="Download on the App Store" style="width: 246px; height: 82px; vertical-align: middle; object-fit: contain;" />
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.thrummoviefinder.thrum" aria-label="Get Thrum on Google Play" style="display: inline-block;">
+      <img src="../assets/images/google-play-badge.png" alt="Get it on Google Play" class="gplay-badge gplay-badge-lg" />
     </a>
   </div>
 </section>
