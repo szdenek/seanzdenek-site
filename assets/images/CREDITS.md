@@ -43,5 +43,5 @@ poster's status can differ by country.
 - The film titles, years and ratings in the recording come from TMDB (this
   product uses the TMDB API but is not endorsed or certified by TMDB); the
   descriptions were written for the demo. Names in the header ("Alex", "J")
-  and the match count are made up.
+  and the match count are made up (not stated on the page).
 - **Added**: 2026-10-17 (replaces the drawn animation v10)
