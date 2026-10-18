@@ -28,3 +28,20 @@ animation on the phone mockup, `/thrum/` page.
   commercial or non-commercial use. See https://unsplash.com/license for the
   full license terms.
 - **Added**: 2026-09-30
+
+## thrum-hero-phone-screen-v11.mp4 / .webm (real app recording, public-domain posters)
+
+A screen recording of the real Thrum app (iOS simulator) showing a demo deck.
+The poster art is from public-domain film posters on Wikimedia Commons;
+Wikimedia's own "public domain" label is not legal clearance, and each
+poster's status can differ by country.
+
+- **Charade (1963)**: https://commons.wikimedia.org/wiki/File:Charade_(1963_poster).jpg
+- **Night of the Living Dead (1968)**: https://commons.wikimedia.org/wiki/File:Night_Of_The_Living_Dead_(1968)_-_Poster.jpg
+- **His Girl Friday (1940)**: https://commons.wikimedia.org/wiki/File:His_Girl_Friday_(1940_poster).jpg
+- **The General (1926)**: https://commons.wikimedia.org/wiki/File:The_General_(1926)_-_Movie_Poster_2.png
+- The film titles, years and ratings in the recording come from TMDB (this
+  product uses the TMDB API but is not endorsed or certified by TMDB); the
+  descriptions were written for the demo. Names in the header ("Alex", "J")
+  and the match count are made up.
+- **Added**: 2026-10-17 (replaces the drawn animation v10)
