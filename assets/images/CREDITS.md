@@ -29,7 +29,7 @@ animation on the phone mockup, `/thrum/` page.
   full license terms.
 - **Added**: 2026-09-30
 
-## thrum-hero-phone-screen-v11.mp4 / .webm (real app recording, public-domain posters)
+## thrum-hero-phone-screen-v12.mp4 / .webm (real app recording, public-domain posters)
 
 A screen recording of the real Thrum app (iOS simulator) showing a demo deck.
 The poster art is from public-domain film posters on Wikimedia Commons;
@@ -42,6 +42,9 @@ poster's status can differ by country.
 - **The General (1926)**: https://commons.wikimedia.org/wiki/File:The_General_(1926)_-_Movie_Poster_2.png
 - The film titles, years and ratings in the recording come from TMDB (this
   product uses the TMDB API but is not endorsed or certified by TMDB); the
-  descriptions were written for the demo. Names in the header ("Alex", "J")
-  and the match count are made up (not stated on the page).
-- **Added**: 2026-10-17 (replaces the drawn animation v10)
+  descriptions were written for the demo. The group name in the header ("Alex")
+  and the match count (12) are made up (not stated on the page).
+- **Added**: 2026-10-17 as v11 (replaced the drawn animation v10). **v12,
+  2026-11-01**: re-recorded in the current app interface (bottom tab bar, mood
+  strip), same four films and the same like, pass, like and match sequence.
+  The previous v11 files were removed from the site.
