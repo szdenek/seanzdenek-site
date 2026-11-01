@@ -432,6 +432,15 @@ full_bleed: true
   /* The screenshots carry width and height attributes (so the page does not jump while they load); keep their shape. */
   .phone-shell img { height: auto; }
 
+  /* Quick picks: the two phones get the wider column and the chips a narrower one with slightly smaller pills. */
+  @media (min-width: 761px) {
+    .quick-picks-grid { grid-template-columns: 0.8fr 1.2fr; gap: 40px; }
+    .quick-picks-grid .chip-cloud { gap: 8px; }
+    .quick-picks-grid .chip { padding: 8px 15px; font-size: 14px; }
+    .quick-picks-grid .phone-pair { gap: clamp(18px, 3vw, 40px); }
+    .quick-picks-grid .phone-pair .phone-frame { width: clamp(170px, 20vw, 270px); }
+  }
+
   /* Two phones side by side (the Taste section). */
   .phone-pair { display: flex; justify-content: center; align-items: flex-start; gap: clamp(28px, 6vw, 80px); margin-top: 8px; }
   .phone-pair .phone-fig { margin: 0; text-align: center; }
@@ -440,6 +449,8 @@ full_bleed: true
   @media (max-width: 760px) {
     /* The page's side padding is wide on a phone, so the pair reaches into it. */
     .phone-pair { gap: 16px; margin: 8px -44px 0; }
+    .quick-picks-grid .phone-pair { order: -1; gap: 16px; }
+    .quick-picks-grid .phone-pair .phone-frame { width: clamp(120px, 37vw, 190px); }
     .phone-pair .phone-frame { width: clamp(120px, 37vw, 190px); }
     .phone-pair figcaption { margin-top: 16px; font-size: 15px; }
   }
@@ -576,10 +587,23 @@ full_bleed: true
       <span class="chip">🕵️ Mystery</span>
       <span class="chip">📺 Reality TV</span>
     </div>
-    <div class="phone-frame">
-      <div class="phone-shell tilt-right">
-        <img src="../assets/images/thrum-screen-mood-paint.jpg" alt="Screenshot of the Paint it view of the mood screen: a color wheel with two draggable dots for mixing a mood, above a Start swiping button, with your current mood and a partner's mood shown at the top" width="720" height="1565" loading="lazy">
-      </div>
+    <div class="phone-pair">
+      <figure class="phone-fig">
+        <div class="phone-frame">
+          <div class="phone-shell">
+            <img src="../assets/images/thrum-screen-mood-quick.jpg" alt="Screenshot of the Quick picks view of the mood screen: the seasonal Halloween pick marked Limited Time, then First Date, Zone Out and Quick &amp; Safe, with a link to all 19 quick picks, above a Start swiping button" width="720" height="1565" loading="lazy">
+          </div>
+        </div>
+        <figcaption>Quick picks</figcaption>
+      </figure>
+      <figure class="phone-fig">
+        <div class="phone-frame">
+          <div class="phone-shell tilt-right">
+            <img src="../assets/images/thrum-screen-mood-paint.jpg" alt="Screenshot of the Paint it view of the mood screen: a color wheel with two draggable dots for mixing a mood, above a Start swiping button, with your current mood and a partner's mood shown at the top" width="720" height="1565" loading="lazy">
+          </div>
+        </div>
+        <figcaption>Paint it</figcaption>
+      </figure>
     </div>
     </div>
   </div>
